@@ -1,0 +1,31 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+#primp{
+    background-color: grey;
+}
+.especial{
+    color: blue;
+}
+h2, h3{
+    border: 1px solid orange;
+}
+ul li{
+    color: red;
+}
+ul ul > li{
+    color: green;
+}
+p > img{
+    border: 5px solid black;
+    width: 100px;
+}
+img[alt="segunda"]{
+    border: 5px solid red;
+}
+h3:has(+ p){
+    background-color: pink;
+}
+p + h3{
+    background-color: blue;
+}
