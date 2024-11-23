@@ -1,0 +1,42 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+.Zelda{
+    border: 2px solid black;
+    padding: 5px;
+}
+.Zelda img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Zelda audio{
+    display: block;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Mario{
+    border: 2px solid black;
+    padding: 5px;
+}
+.Mario img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Mario audio{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+}
