@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 110px;
+}
+
+legend {
+    color: darkblue;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: #f4f1ed;
+    color: firebrick;
+    border: 2px solid darkgoldenrod;
+    border-radius: 7px;
+    width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+fieldset label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+fieldset input,
+fieldset textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    padding: 5px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+}
+
+footer h3 {
+    color: #f7c600;
+    margin: 10px 0;
+}
+.formulario {
+    display: flex;
+}
