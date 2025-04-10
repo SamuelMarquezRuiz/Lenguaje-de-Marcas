@@ -1,13 +1,20 @@
 <button id="toggleButton">Toggle</button>
+<button id="resetButton">Reset visibility</button>
 <div id="myDiv" style="display: block;">This is a hidden div</div>
 <script>
   const button = document.getElementById("toggleButton");
   const div = document.getElementById("myDiv");
+  //Añadimos el segundo botón al script para volver a mostrar el div
+  const resetButton = document.getElementById("resetButton");
 
   button.addEventListener("click", function () {
       div.style.display = "none";
   });
 
+  // Añadimos el evento al segundo botón
+  resetButton.addEventListener("click", function () {
+      div.style.display = "block";
+  });
   // TODO: Create a second button that shows the div again when clicked. the style to apply is div.style.display = "block";
 
 </script>

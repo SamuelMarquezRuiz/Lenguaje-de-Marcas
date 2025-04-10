@@ -30,18 +30,49 @@
   <h1>First Javascript contact</h1>
   <p>This is the initial text.</p>
 
-  <button>Hello World</button>
-  <button>Goodbye World</button>
-  <button>Bold</button>
-  <button>Italic</button>
-  <button>Change Color</button>
+  <button id="hello">Hello World</button>
+  <button id="goodbye">Goodbye World</button>
+  <button id="bold">Bold</button>
+  <button id="italic">Italic</button>
+  <button id="changeColor">Change Color</button>
 
   <script>
+    const paragraph = document.querySelector("p");
       // A button that, when clicked, changes the text of the paragraph <p> to "Hello World".
+      const helloButton = document.getElementById("hello");
+      helloButton.addEventListener("click", function () {
+        paragraph.textContent = "Hello World";
+      });
       // A button that, when clicked, changes the text of the paragraph < p > to "Goodbye World".
+      const goodbyeButton = document.getElementById("goodbye");
+      goodbyeButton.addEventListener("click", function () {
+        paragraph.textContent = "Goodbye World";
+      });
       // A button that, when clicked, change the text style to bold.
+      const boldButton = document.getElementById("bold");
+      boldButton.addEventListener("click", function () {
+        paragraph.style.fontWeight = "bold";
+        paragraph.textContent = "Bold";
+        paragraph.style.fontStyle = "normal";
+      });
       // A button that, when clicked, change the text style to italic.
+      const italicButton = document.getElementById("italic");
+      italicButton.addEventListener("click", function () {
+        paragraph.style.fontWeight = "normal";
+        paragraph.style.fontStyle = "italic";
+        paragraph.textContent = "Italic";
+      }); 
       // A button that, when clicked, change the color of the text to red, when it is clicked again set the color back to the initial color.
+      const changeColorButton = document.getElementById("changeColor");
+      changeColorButton.addEventListener("click", function () {
+        if (paragraph.style.color === "red") {
+          paragraph.style.color = "";
+          paragraph.textContent = "Change Color - Black";
+        } else {
+          paragraph.style.color = "red";
+          paragraph.textContent = "Change Color - Red";
+        }
+      });
 
   </script>
 
