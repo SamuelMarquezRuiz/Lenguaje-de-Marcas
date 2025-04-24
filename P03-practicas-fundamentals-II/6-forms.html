@@ -39,7 +39,51 @@
     // If the email is empty, show an error message in the <span> tag with id="errorEmail"
     // If the password is empty, show an error message in the <span> tag with id="errorPassword"
     // If the password and confirm password are not the same, show an error message in the <span> tag with id="errorConfirmPassword"
+    const form = document.getElementById('registroForm');
+    const nombreInput = document.getElementById('nombre');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirmPassword');
+  
+    const errorNombre = document.getElementById('errorNombre');
+    const errorEmail = document.getElementById('errorEmail');
+    const errorPassword = document.getElementById('errorPassword');
+    const errorConfirmPassword = document.getElementById('errorConfirmPassword');
+  
+    const pTags = form.querySelectorAll('p');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      let valido = true;
+      errorNombre.textContent = '';
+      errorEmail.textContent = '';
+      errorPassword.textContent = '';
+      errorConfirmPassword.textContent = '';
+      if (nombreInput.value.trim() === '') {
+        errorNombre.textContent = 'El nombre es obligatorio';
+        valido = false;
+      }
+      if (emailInput.value.trim() === '') {
+        errorEmail.textContent = 'El email es obligatorio';
+        valido = false;
+      }
+      if (passwordInput.value.trim() === '') {
+        errorPassword.textContent = 'La contraseña es obligatoria';
+        valido = false;
+      }
+      if (passwordInput.value !== confirmPasswordInput.value) {
+        errorConfirmPassword.textContent = 'Las contraseñas no coinciden';
+        valido = false;
+      }
+      if (valido) {
+        pTags[0].textContent = `Nombre: ${nombreInput.value}`;
+        pTags[1].textContent = `Email: ${emailInput.value}`;
+        pTags[2].textContent = `Contraseña: ${passwordInput.value}`;
+        pTags[3].textContent = `Confirmar Contraseña: ${confirmPasswordInput.value}`;
+      }
+    });
   </script>
+  
 </body>
 
 </html>
